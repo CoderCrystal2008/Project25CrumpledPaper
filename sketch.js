@@ -20,7 +20,7 @@ function setup() {
 	paper = new Paper (200,120);
 
 	//creates the dustbin
-	dustbin = new Dustbin (400,591,100,90);
+	dustbin = new Dustbin (400,591,150,100);
 	
 	//creates the ground
 	ground = new Ground (400,650,800,20);
