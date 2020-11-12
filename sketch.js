@@ -4,8 +4,11 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
+var dustbinImg;
+
 function preload()
 {
+	dustbinImg = loadImage("images/dustbingreen.png");
 	
 }
 
@@ -20,7 +23,10 @@ function setup() {
 	paper = new Paper (200,120);
 
 	//creates the dustbin
-	dustbin = new Dustbin (400,591,150,100);
+	dustbin = new Dustbin (400,591,10,100);
+	dustbin1 = new Dustbin (600,591,10,100);
+	dustbin2 = new Dustbin (500,640,200,10);
+
 	
 	//creates the ground
 	ground = new Ground (400,650,800,20);
@@ -40,6 +46,11 @@ function draw() {
   paper.display();
   dustbin.display();
   ground.display();
+  dustbin1.display();
+  dustbin2.display();
+
+  imageMode(CENTER);
+  image(dustbinImg,500,570,300,150);
 
 	if(paper.y-dustbin.y<paper.height/2+dustbin.height/2){
 		paper.velocityY = 10;

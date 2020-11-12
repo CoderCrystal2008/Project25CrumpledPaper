@@ -12,7 +12,7 @@ class Dustbin {
 
         //adds body to world
         World.add(world,this.body);
-        this.image = loadImage("images/dustbingreen.png")
+        //this.image = loadImage("images/dustbingreen.png")
 
     }
     display(){
@@ -21,8 +21,10 @@ class Dustbin {
         push();
         translate(pos.x,pos.y);
         fill(255);
-        imageMode(CENTER);
-        image(this.image,0,0,this.width,this.height);
+        /*imageMode(CENTER);
+        image(this.image,0,0,this.width,this.height);*/
+        rectMode(CENTER);
+        rect(0,0,this.width,this.height);
         pop();
     }
 }
